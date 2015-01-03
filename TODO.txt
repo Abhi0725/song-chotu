@@ -2,3 +2,5 @@
 2. Save song in a folder /songs
 3. Add progress bar using progressbar.py module
 4. Add an option to search by song name (currently this only allows to search by movie name)
+5. Convert to .exe file using py2exe
+6. Use Tkinter (or any other GUI lib) to create GUI.
