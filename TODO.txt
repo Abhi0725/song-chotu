@@ -1,0 +1,4 @@
+1. Save song file with <song-name>.mp3 (currently this saves as abhi.mp3 only)
+2. Save song in a folder /songs
+3. Add progress bar using progressbar.py module
+4. Add an option to search by song name (currently this only allows to search by movie name)
