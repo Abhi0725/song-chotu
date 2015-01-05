@@ -42,7 +42,7 @@ def main():
     print '='*30
     print 'Song Downloader'
     print '='*30
-    base_url = 'http://w2.djpunjab.us/m/page/allmusic'
+    base_url = 'http://m.djraag.net/m/page/allmusic'
     movie = raw_input("Please enter the movie name: ")
     if not movie:
         print 'No movie name. exiting...'
