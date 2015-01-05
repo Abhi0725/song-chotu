@@ -6,8 +6,8 @@ A song downloader from internet
 =========
 Requirements
 =========
-1. requests.py <br>
-2. bs4 <br><br>
+requests.py and bs4 <br><br>
+
 Example:<br>
 ============================== <br>
 Song Downloader
