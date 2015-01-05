@@ -3,11 +3,11 @@ song-chotu
 
 A song downloader from internet
 
-++++++++++
+=========
 Requirements
-1. requests.py
+=========
+1. requests.py <br>
 2. bs4
-++++++++++
 Example:
 ==============================
 Song Downloader
