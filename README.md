@@ -1,41 +1,56 @@
-song-chotu
+# song-chotu
 ==========
 
-A song downloader from internet
+> A song downloader from internet
 
 =========
-Requirements
+### Requirements
 =========
-requests.py and bs4 <br><br>
+packages required: requests and bs4 
 
-Example:<br>
-============================== <br>
-Song Downloader <br>
-============================== <br>
-Please enter the movie name: pk <br>
-1. PK <br>
-2. Aapko Pehle Bhi Kahin Dekha Hai <br>
-3. Chori Chori Chupke Chupke <br>
-4. Chupke Se <br>
-5. Hum Aapke Hain Kaun <br>
-6. Upkar <br>
-7. Hamara Dil Aapke Paas Hai <br>
-8. Chupke Chupke <br>
-9. Hum Aapke Dil Mein Rehte Hain <br>
-10. Humain Tumse Pyaar Ho Gaya Chupke Chupke <br>
-<br>
-Enter movie number: 1 <br>
-1. Bhagwan Hai Kahan Re Tu <br>
-2. Chaar Kadam <br>
-3. Dil Darbadar <br>
-4. Love Is A Waste Of Time <br>
-5. Nanga Punga Dost <br>
-6. Pk Dance (Theme) <br>
-7. Tharki Chokro <br>
-Enter song number: 5 <br>
-downloading... <br>
+```
+pip install requests
+```
+```
+pip install bs4
+```
 
-download complete <br>
-saved in C:\Users\SONY\Desktop\python\songs as Nanga Punga Dost.mp3 <br><br>
+### Example:
+```
+============================== 
+Song Downloader 
+============================== 
+Please enter the movie name: pk 
+1. PK 
+2. Aapko Pehle Bhi Kahin Dekha Hai 
+3. Chori Chori Chupke Chupke 
+4. Chupke Se 
+5. Hum Aapke Hain Kaun 
+6. Upkar 
+7. Hamara Dil Aapke Paas Hai 
+8. Chupke Chupke 
+9. Hum Aapke Dil Mein Rehte Hain 
+10. Humain Tumse Pyaar Ho Gaya Chupke Chupke 
 
-Needs lots of improvements. Read Todo file. 
+Enter movie number: 1 
+1. Bhagwan Hai Kahan Re Tu 
+2. Chaar Kadam 
+3. Dil Darbadar 
+4. Love Is A Waste Of Time 
+5. Nanga Punga Dost 
+6. Pk Dance (Theme) 
+7. Tharki Chokro 
+Enter song number: 5 
+downloading... 
+
+Enter kbps choice number (e.g 1): 3 
+please wait... 
+1. Download In 32 Kbps 
+2. Download In 48 Kbps 
+3. Download In 128 Kbps 
+
+====
+Downloading...
+download complete
+saved in /Library/WebServer/Documents/song-chotu/songs as Nanga Punga Dost.mp3 
+```

@@ -46,26 +46,42 @@ def main():
     print '='*30
     print 'Song Downloader'
     print '='*30
-    base_url = 'http://m.djraag.net/m/page/allmusic'
+    base_url = 'http://djraag.com'
     movie = raw_input("Please enter the movie name: ")
     if not movie:
         print 'No movie name. exiting...'
         sys.exit(1)
     else:
-        url = base_url+'/search1.php?search='+movie+'&type=album'
+        url = base_url+'/bollywood/searchbycat.html?search='+movie+'&type=album&cat_id=5&submit=Submit'
         movie_link = get_movie(url)
         if movie_link == 'failed to connect':
             print 'failed to connect'
             sys.exit(1)
         else:
-            movie_link = base_url+movie_link[1:]
+            movie_link = base_url+movie_link
             song_name, song_url = get_song(movie_link)
-            song_url = base_url+song_url[1:]
-            print 'downloading...'
+            song_url = base_url+song_url
+            print 'please wait...'
             page = requests.get(song_url)
             soup = BeautifulSoup(page.text)
-            link = soup.findAll('a',href=True)
-            song_url = link[1]['href']
+            links = soup.findAll('a',href=True)
+            song_urls = []
+            kbps_number = 0
+            for link in links:
+                if "Kbps_-_www.DjRaag.Net.mp3" in link['href']:
+                    kbps_number += 1
+                    print str(kbps_number)+'. '+link.contents[0]
+                    song_urls.append(link['href'])
+
+            kbps_choice = int(raw_input("Enter kbps choice number (e.g 1): "))
+
+            if not kbps_choice:
+                kbps_choice = 1
+
+            print "===="
+            song_url = song_urls[kbps_choice-1]
+            print "Downloading..."
+
             data = requests.get(song_url).content
 
             os.chdir('songs')
